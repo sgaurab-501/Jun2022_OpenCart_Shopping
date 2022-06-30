@@ -29,8 +29,8 @@ public void forgotPwdLinkExistsTest() {
 	
 }
 
-
-@Test(priority=5)
+/*
+ * @Test(priority=5)
 public void loginTest() throws Exception  {
 	
 	String uname = prop.getProperty("username");
@@ -39,14 +39,9 @@ public void loginTest() throws Exception  {
 	
 	AccountPage accPage = lp.doLogin(uname, passwd, pin);
 
-
-String accPageTitle = accPage.getAcctPageTitle();
-System.out.println(accPageTitle);
-
-
-Assert.assertEquals(accPageTitle, Constants.ACCOUNT_PAGE_TITLE);
-Assert.assertTrue(accPage.isProfileLinkExist());
-
 }
+ * 
+ */
+
 
 }

@@ -89,7 +89,7 @@ public class ElementUtil {
 		public void doClick(By locator) {
 			getElement(locator).click();
 		}
-
+	
 		public String doGetAttributeValue(By locator, String attributeName) {
 			return getElement(locator).getAttribute(attributeName);
 		}

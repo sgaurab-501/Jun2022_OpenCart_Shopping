@@ -46,6 +46,7 @@ public class DriverFactory {
 	}
 
 	driver.manage().deleteAllCookies();
+	driver.manage().window().maximize();
 	String url = prop.getProperty("url");
 
 	driver.get(url);

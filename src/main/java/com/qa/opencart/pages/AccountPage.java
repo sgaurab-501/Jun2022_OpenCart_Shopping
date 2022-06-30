@@ -20,9 +20,10 @@ public class AccountPage {
 	private By actSectionHeader = By.xpath("//h3[contains(text(),'Give your')]");
 	private By searchBar = By.id("search-component-5e0d7b24-ffc1-4cde-8ac9-c4eee04bb4ed");
 	private By topicLink = By.xpath("//div[@class='inline-help__results-cell']");
-	private By profileLink = By.xpath("//div[@class='masterbar__section masterbar__section--right']/a[1]");
-	
-	
+
+	private By mktPlaceLink = By.xpath("//ul[@class='nav navbar-nav']/li/a[contains(text(),'Market')]");
+
+    private By logoutLink = By.xpath("//div[@class='navbar-right hidden-xs']/a[contains(text(),'Logout')]");
 	public AccountPage(WebDriver driver)	{
 	
 	this.driver = driver;
@@ -63,14 +64,25 @@ public boolean isSearchBarExist() {
 	
 }
 
-public boolean isProfileLinkExist() {
 
-return eleUtil.waitForElementVisible(profileLink, Constants.DEFAULT_ELEMENT_WAIT_TIMEOUT).isDisplayed();	
+public boolean isMarketPlaceLinkExist() {
+	
+	return eleUtil.getElement(mktPlaceLink).isDisplayed();
+	
+}
 
+public MarketPlacePage clickOnMktPlaceLink() {
+	eleUtil.getElement(mktPlaceLink).click();
+	return new MarketPlacePage(driver);
+	
+	
+	
+}
+
+public void doLogout() {
+	
 }
 
 
-
- 
 
 }
